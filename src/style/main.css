@@ -12,27 +12,39 @@ body {
 .visual,
 .main,
 .slogan,
-.footer {
+.footer-inner {
   width: var(--container-size, 940px);
   margin: 0 auto;
 }
 /* 헤더 */
 .header {
   background-color: yellow;
+  height: 10vh;
 }
 /* 비주얼 */
 .visual {
   background-color: pink;
+  height: 10vh;
 }
 /* 메인 */
 .main {
   background-color: skyblue;
+  height: 60vh;
+  display: flex; /* 이제부터 main은 flex container가 됨 */
+}
+.group {
+  border: 1px solid red;
 }
 /* 슬로건 */
 .slogan {
   background-color: lime;
+  height: 10vh;
 }
 /* 푸터 */
 .footer {
   background-color: orange;
+}
+.footer-inner {
+  background-color: yellow;
+  height: 10vh;
 }
