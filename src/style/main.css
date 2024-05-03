@@ -34,10 +34,11 @@ body {
   height: 60vh;
   display: flex;
   flex-flow: row nowrap;
-  /* justify-content: space-between; 
-  align-items: stretch; 
-  padding: 28px 16px 36px; */
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 28px 16px 36px;
 }
+
 .group-wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -50,6 +51,7 @@ body {
 
 .group1 {
   width: 250px;
+  order: 1;
 }
 
 .group2 {
@@ -58,6 +60,7 @@ body {
 
 .group3 {
   width: 190px;
+  order: -1;
 }
 
 /* 슬로건 */
