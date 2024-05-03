@@ -31,18 +31,8 @@ body {
 /* 메인 콘텐츠 */
 .main {
   background-color: skyblue;
-  height: 60vh;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  padding: 28px 16px 36px;
-}
-
-.group-wrapper {
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 0 auto;
+  display: flow-root;
+  min-height: 450px;
 }
 
 .group {
@@ -51,22 +41,26 @@ body {
 
 .group1 {
   width: 250px;
-  order: 1;
+  float: left;
+  background-color: orange;
 }
 
 .group2 {
   width: 380px;
+  background-color: silver;
+  float: left;
 }
 
 .group3 {
   width: 190px;
-  order: -1;
+  float: left;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
   height: 10vh;
+  clear: both;
 }
 /* 푸터 */
 .footer {
