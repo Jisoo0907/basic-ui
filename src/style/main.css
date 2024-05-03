@@ -16,25 +16,50 @@ body {
   width: var(--container-size, 940px);
   margin: 0 auto;
 }
+
 /* 헤더 */
 .header {
   background-color: yellow;
   height: 10vh;
+  padding: 0 50px;
 }
 /* 비주얼 */
 .visual {
   background-color: pink;
   height: 10vh;
 }
-/* 메인 */
+/* 메인 콘텐츠 */
 .main {
   background-color: skyblue;
   height: 60vh;
-  display: flex; /* 이제부터 main은 flex container가 됨 */
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: space-between; 
+  align-items: stretch; 
+  padding: 28px 16px 36px; */
 }
+.group-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+}
+
 .group {
   border: 1px solid red;
 }
+
+.group1 {
+  width: 250px;
+}
+
+.group2 {
+  width: 380px;
+}
+
+.group3 {
+  width: 190px;
+}
+
 /* 슬로건 */
 .slogan {
   background-color: lime;
@@ -45,6 +70,6 @@ body {
   background-color: orange;
 }
 .footer-inner {
-  background-color: yellow;
+  background: yellow;
   height: 10vh;
 }
