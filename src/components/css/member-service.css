@@ -1,0 +1,43 @@
+/* 텍스트 링크 모음 */
+:root {
+  --base-font-family: "SUIT Variable", sans-serif;
+}
+.member-service {
+  --font-size: 0.875rem;
+
+  font-size: 0; /* 14/16 */
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  text-align: right; /* 블록 요소에 적용하면 그 블록이 포함한 인라인 요소에도 적용 */
+
+  li {
+    /* nesting(중첩) */
+    display: inline-block;
+    margin: 0;
+    font-size: var(--font-size);
+    a {
+      display: inherit;
+      padding: 8px 8px 8px 4px;
+      font-variant: small-caps;
+      margin: 0;
+      text-transform: uppercase;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* a:link {
+      color: green;
+    }
+    a:visited {
+      color: silver;
+    }
+    a:active {
+      color: red;
+    }
+    a:hover,
+    a:focus {
+      color: yellow;
+    } */
+  }
+}
