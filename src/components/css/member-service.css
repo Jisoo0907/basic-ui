@@ -5,6 +5,7 @@
 .member-service {
   --font-size: 0.875rem;
 
+  font-family: var(--base-font-family);
   font-size: 0; /* 14/16 */
   list-style-type: none;
   padding-inline-start: 0;
