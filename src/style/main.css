@@ -16,6 +16,7 @@ body {
   background-image: url(/images/bg_flower.png),
     linear-gradient(to bottom, #ccc 0%, #eee 30%, #aaa 50%, #fff 100%);
   /* 개별 속성 background-image: linear-gradient(red, green); */
+  background-repeat: no-repeat;
   background-position: 50% 0, 0 0;
 }
 
@@ -77,7 +78,7 @@ body {
 }
 /* 메인 콘텐츠 */
 .main {
-  /* background-color: skyblue; */
+  background-color: #fff;
   /* height: 60vh; */
   display: flow-root;
   min-height: 450px;
