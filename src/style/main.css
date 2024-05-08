@@ -50,11 +50,11 @@ body {
   /* 이동 효과 애니메이션 선언 => 실행 */
   0% {
     font-size: 12px;
-    translate: 0, 0; /* 이동하는 함수 */
+    translate: 0 0; /* 이동하는 함수 */
   }
   100% {
     font-size: 24px;
-    translate: 320px, 75px;
+    translate: 320px 75px;
   }
 }
 
