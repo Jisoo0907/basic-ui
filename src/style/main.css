@@ -12,6 +12,7 @@
 /* gradient 배경, 배경 이미지 */
 body {
   margin: 0;
+  line-height: 1.15; /* 딱 맞게 쓸 때 1 쓰는 데 잘릴 수 있어서 원래 1.12정도 */
   font-family: "SUIT Variable", sans-serif;
   background-color: #ccc;
   background-image: url(/images/bg_flower.png),
@@ -44,6 +45,13 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  margin: 0;
+  font-size: 1em;
+  a,
+  img {
+    /* vertical-align: top; inline 상자 정렬. inline요소가 가질 수 있는 속성. text-align은 block */
+    display: block;
+  }
 }
 
 /* 텍스트 링크 모음 */
