@@ -15,8 +15,7 @@ body {
   font-family: "SUIT Variable", sans-serif;
   background-color: #ccc;
   background-image: url(/images/bg_flower.png),
-    linear-gradient(to bottom, #ccc 0%, #eee 30%, #aaa 50%, #fff 100%);
-  /* 개별 속성 background-image: linear-gradient(red, green); */
+    linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 50%, #fff 100%);
   background-repeat: no-repeat;
   background-position: 50% 0, 0 0;
 }
@@ -36,7 +35,6 @@ body {
   height: 120px;
   padding: 0 50px;
   border-radius: 0 0 15px 15px;
-  /* border: 1px solid green; */
   position: relative;
 }
 /* 로고 */
@@ -52,11 +50,23 @@ body {
   /* 이동 효과 애니메이션 선언 => 실행 */
   0% {
     font-size: 12px;
-    transform: translate(0, 0); /* 이동하는 함수 */
+    translate: 0, 0; /* 이동하는 함수 */
   }
   100% {
     font-size: 24px;
-    transform: translate(400px, 75px);
+    translate: 320px, 75px;
+  }
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 1; /* before와 after에 지정 */
+  }
+  /* 50% {
+    opacity: 0;
+  } */
+  100% {
+    opacity: 0;
   }
 }
 
@@ -64,8 +74,13 @@ body {
   height: 120px;
   block-size: 120px;
   position: relative;
+
   &::before,
   &::after {
+    animation-name: fadeEffect;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; /* 중간 단계(50%) 안 만들고 조절 */
     content: "";
     width: inherit;
     inline-size: inherit;
@@ -88,6 +103,7 @@ body {
   background-image: url(/images/ani_flower_03.png),
     url(/images/ani_flower_04.png);
   background-position: 300px 0, 800px 30px;
+  animation-delay: 2000ms; /* 2초 지나면 사라지게 */
 }
 
 .visual-text {
@@ -95,7 +111,9 @@ body {
   animation-name: moveEffect;
   animation-duration: 5s;
   animation-fill-mode: forwards; /* 글자가 커진 상태로 멈춤 */
-  background-color: lime;
+  display: inline-block; /* 컨텐츠 크기만큼 박스 크기 줆 */
+  z-index: 1;
+  position: relative;
 }
 /* 메인 콘텐츠 */
 .main {
