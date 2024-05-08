@@ -1,0 +1,14 @@
+.sr-only {
+  background-color: red;
+  position: absolute;
+  clip: rect(0, 0, 0, 0); /* absolute랑 짝꿍 */
+  width: 1px;
+  height: 1px;
+  /* inline-size: 1px;
+  block-size: 1px; */
+  /* overflow: hidden; 넘치는 면적에 대한 처리 */
+  /* top: -9999px; 안드로메다로 보냄 */
+  overflow: hidden;
+  margin: -1px;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
