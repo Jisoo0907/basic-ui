@@ -41,10 +41,14 @@
   white-space: nowrap; /* 공간 작아졌을 때 줄바꿈 되지 말라고 */
 
   /* 가상 클래스 실습 
-  &:focus {
+  &:focus { // &는 중첩 패턴 사용할 때 넣기.
     outline: 5px solid blue; // border같은 효과. 키보드로 접근, 마우스로 클릭 시 보여줌 
   }
   */
+  /* focus outline 없애달라고 해서 0값을 줬으면 visible은 꼭 추가. 키보드로 focus 시 outline 보여줌 */
+  &:focus-visible {
+    outline: 2px solid green;
+  }
 }
 
 /* 링크 텍스트 컴포넌트 (아이콘 유형) */
