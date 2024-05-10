@@ -1,0 +1,41 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 50px;
+}
+
+.menu {
+  background: orangered linear-gradient(to bottom, orange, orangered, orange); /* 테마색 변수로 바꿔두기 */
+  box-shadow: 0 -5px 0 0 #121212; /* -하면 윗쪽에 생김. 색 지정 안 하면 currentcolor */
+  color: #000;
+  display: flow-root;
+  padding-left: 225px;
+  inset-inline-start: 225px;
+
+  > li {
+    /* menu>li */
+    float: left; /* HTML에 대해같은 서브 메뉴도 가로로 배치됨. 자손 선택자 썼으니까. */
+    border-left: 2px solid #fff; /* 왜 결과는 같은데 버튼한테 안 주고 li한테?
+    => click 될까 봐. 이런 영역은 클릭할 수 없는 영역에 장식. */
+  }
+
+  button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 24px;
+    height: 60px;
+    block-size: 50px;
+    background: transparent; /* 투명 */
+    border: 0;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000; /* 윤곽체 */
+  } /* depth가 깊은 그림자 -> 그림자 계속 삽입하면 되긴 함. */
+
+  ul {
+    display: none;
+    /* position: absolute;  독립적인 맥락 형성. 내가 가진 자식요소를 포함해야. */
+  }
+}
+/* box-shadow: 상자 크기에 영향 안 줌. border: 상자 크기에 영향 줌. */
