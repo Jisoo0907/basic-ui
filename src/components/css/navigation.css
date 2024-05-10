@@ -21,21 +21,56 @@ body {
     => click 될까 봐. 이런 영역은 클릭할 수 없는 영역에 장식. */
   }
 
+  .is--active {
+    button {
+      color: yellow;
+
+      &::after {
+        content: "";
+        background: #000;
+        display: block;
+        /* border-top: 5px solid blue; */
+        height: 1px;
+      }
+    }
+
+    /* ul {
+      display: block;
+    } */
+  }
   button {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0 24px;
     height: 60px;
-    block-size: 50px;
+    block-size: 60px;
     background: transparent; /* 투명 */
     border: 0;
     color: #fff;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000; /* 윤곽체 */
+
+    span {
+      display: block;
+    }
   } /* depth가 깊은 그림자 -> 그림자 계속 삽입하면 되긴 함. */
 
+  /* button[aria-expanded="true"] {
+    color: lime;
+  } */
   ul {
     display: none;
+    position: absolute;
+    top: 70px;
+    left: 225px;
+    background-color: pink;
     /* position: absolute;  독립적인 맥락 형성. 내가 가진 자식요소를 포함해야. */
+
+    li {
+      display: inline-block;
+    }
   }
+  /* ul[aria-hidden="false"] {
+    display: block;
+  } */
 }
 /* box-shadow: 상자 크기에 영향 안 줌. border: 상자 크기에 영향 줌. */
