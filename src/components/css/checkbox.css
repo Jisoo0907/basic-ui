@@ -32,6 +32,7 @@ h1 {
     outline: none;
   }
   input:focus-visible {
-    outline: 2px solid red; /* 체크됐을 때 border 안 보여야 되는 거 아닌지? */
+    /* outline: 2px solid red; /* 체크됐을 때 border 안 보여야 되는 거 아닌지? */
+    outline: 2px solid red;
   }
 }
