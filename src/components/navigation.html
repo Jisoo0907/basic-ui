@@ -18,184 +18,180 @@
   </head>
   <body>
     <h1 class="sr-only">내비게이션</h1>
-
-    <nav class="navigation">
-      <h2 class="sr-only" id="navigationTitle">메인 메뉴</h2>
-      <!--숨겼지만 접근 가능-->
-      <ul role="group" aria-labelledby="navigationTitle" class="menu">
-        <!--전체가 하나의 메뉴그룹임을 알려줌-->
-        <!--aria-describedby는 긴 설명. table의 cation같은 역할.-->
-        <li role="none" class="is--active">
-          <!--과거에 presentation속성 사용-->
-          <!--is--active를 btn에 주면 안됨? 버튼과 서브레벨 관계: 형제 관계
-        css는 형제로 접근하기보다 부모->자식으로 가는 게 편함. 부모한테 지정하고 버튼에도 접근, 서브 메뉴에도 접근하게.-->
-          <button
-            type="button"
-            aria-haspopup="true"
-            aria-expanded="true"
-            aria-controls="menu1"
-          >
-            <!--하위 메뉴 있음 알려줌, 펼쳐지는 메뉴 있음, 메뉴 보였다/감췄다 컨트롤-->
-            HTML에 대해
-          </button>
-          <ul aria-hidden="false" id="menu1">
-            <!--aria-hidden을 왜? 화면에도 보이고 읽어도 주라.-->
-            <!--false면 스크린리더가 읽을 수 O, 하위 메뉴에 포커스 갈 수 있게 tabindex 0으로-->
-            <li>
-              <a href="/" tabindex="0"
-                ><span class="fas fa-circle-dot"></span>HTML5 소개</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="0"
-                ><span class="fas fa-circle-dot"></span>레퍼런스 소개</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="0"
-                ><span class="fas fa-circle-dot"></span>활용예제</a
-              >
-            </li>
-          </ul>
-        </li>
-        <!--li로 묶으니까 마치 div 같음-->
-        <li role="none">
-          <button
-            type="button"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="menu2"
-          >
-            CSS에 대해
-          </button>
-          <ul aria-hidden="true" id="menu2">
-            <!--화면에 보이지만 읽지 말라-->
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>CSS란?</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>CSS2 VS CSS3</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>CSS의 미래</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li role="none">
-          <button
-            type="button"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="menu3"
-          >
-            웹표준
-          </button>
-          <ul aria-hidden="true" id="menu3">
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>구조설계</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>스타일링</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>제어 및 동작</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li role="none">
-          <button
-            type="button"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="menu4"
-          >
-            웹 접근성
-          </button>
-          <ul aria-hidden="true" id="menu4">
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>웹접근성의 이해</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>WCAG</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>장차법</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li role="none">
-          <button
-            type="button"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="menu5"
-          >
-            묻고 답하기
-          </button>
-          <ul aria-hidden="true" id="menu5">
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>HTML</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>CSS</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>Javascript</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li role="none">
-          <button
-            type="button"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="menu6"
-          >
-            자료실
-          </button>
-          <ul aria-hidden="true" id="menu6">
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>웹표준</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>웹접근성</a
-              >
-            </li>
-            <li>
-              <a href="/" tabindex="-1"
-                ><span class="fas fa-circle-dot"></span>WAI-ARIA</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <!-- 로고 - 콘텐츠 이미지 -->
+    <header class="header">
+      <div class="logo">
+        <a href="/" class="logo-link">
+          <img src="/images/logo.png" alt="웹카페" />
+        </a>
+      </div>
+      <nav class="navigation">
+        <h2 class="sr-only" id="navigationTitle">메인 메뉴</h2>
+        <ul role="group" aria-labelledby="navigationTitle" class="menu">
+          <li role="none" class="is--active">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="true"
+              aria-controls="menu1"
+            >
+              HTML에 대해
+            </button>
+            <ul aria-hidden="false" id="menu1">
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>HTML5 소개</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>레퍼런스 소개</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>활용예제</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none" class="is-active">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="menu2"
+            >
+              CSS에 대해
+            </button>
+            <ul aria-hidden="true" id="menu2">
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>CSS란?</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>CSS2 VS CSS3</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>CSS의 미래</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="menu3"
+            >
+              웹표준
+            </button>
+            <ul aria-hidden="true" id="menu3">
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>구조설계</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>스타일링</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>제어 및 동작</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="menu4"
+            >
+              웹 접근성
+            </button>
+            <ul aria-hidden="true" id="menu4">
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>웹접근성의 이해</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>WCAG</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>장차법</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="menu5"
+            >
+              묻고 답하기
+            </button>
+            <ul aria-hidden="true" id="menu5">
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>HTML</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>CSS</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>Javascript</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="menu6"
+            >
+              자료실
+            </button>
+            <ul aria-hidden="true" id="menu6">
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>웹표준</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>웹접근성</a
+                >
+              </li>
+              <li>
+                <a href="/" tabindex="-1"
+                  ><span class="fas fa-circle-dot"></span>WAI-ARIA</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
