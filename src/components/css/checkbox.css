@@ -39,10 +39,8 @@ h1 {
 
 .tooltip {
   margin-top: 50px;
-  background-color: pink;
 
   .tooltip-icon {
-    background-color: yellow;
     display: flex;
     width: 20px;
     height: 20px;
