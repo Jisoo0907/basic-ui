@@ -42,14 +42,15 @@
   ul {
     margin: 0.5rem 0 1rem;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 0.625rem;
 
     li {
       padding: 0.25rem 0.5rem;
       background-color: #edf2f8;
       border-radius: 2rem;
+      flex: 0 0 auto;
     }
   }
 }
