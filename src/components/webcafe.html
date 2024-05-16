@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class="container">
+      <!-- 헤더 -->
       <div class="header yellow">
         <div class="logo" aria-label="웹카페"></div>
 
@@ -25,6 +26,7 @@
           <span class="burger-bar burger-bar-bottom"></span>
         </button>
       </div>
+      <!-- 네비게이션 -->
       <div class="navigation pink">
         <nav class="menu" aria-label="메인 메뉴">
           <div class="menu-item">
@@ -41,13 +43,32 @@
           </div>
         </nav>
       </div>
+      <!-- 메인 -->
       <div class="main green grid-container">
-        <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">추천서적</div>
-        <div class="news orange cols-6 sm-cols-8 lg-cols-6">새소식</div>
+        <!-- 추천서적 -->
+        <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">
+          <div class="sprite">추천서적</div>
+        </div>
+        <!-- 새소식 -->
+        <div class="news orange cols-6 sm-cols-8 lg-cols-6">
+          <div class="sprite">새소식</div>
+          <figure class="iframe-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/pDEXW5jTNyw?si=-Z98Dj-6ZzqWksgT"
+              title="YouTube video player"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </figure>
+        </div>
+        <!-- 게시판, 인기 사이트, 트위터 -->
         <div class="board gray cols-12 sm-cols-8 lg-cols-4">게시판</div>
         <div class="favorite red cols-6 sm-cols-4 lg-cols-3">인기 사이트</div>
         <div class="twitter olivegreen cols-6 sm-cols-12 lg-cols-5">트위터</div>
       </div>
+      <!-- 푸터 -->
       <div class="footer violet">푸터</div>
     </div>
 
