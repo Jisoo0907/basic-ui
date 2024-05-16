@@ -1,11 +1,20 @@
-// grid-show 클래스를 가진 요소를 선택합니다.
-const gridElement = document.querySelector(".grid-show");
+// DOM 선택
+const burgerButton = document.querySelector(".burger-button");
+const menu = document.querySelector(".menu");
 
-// keydown 이벤트 리스너를 추가합니다.
-document.addEventListener("keydown", function (event) {
-  // ESC 키를 눌렀는지 확인합니다.
-  if (event.key === "Escape" || event.key === "Esc" || event.keyCode === 27) {
-    // grid-show 클래스를 토글합니다.
-    gridElement.classList.toggle("grid-show");
+// 함수 구현
+const handleClick = () => {
+  // 'is-active' 클래스의 존재 여부에 따라 클래스를 추가하거나 제거합니다.
+  if (burgerButton.classList.contains("is-active")) {
+    burgerButton.classList.remove("is-active");
+    burgerButton.setAttribute("aria-label", "메인메뉴 열기");
+    menu.classList.remove("is-active"); // '.menu'에서 'is-active' 클래스를 제거합니다.
+  } else {
+    burgerButton.classList.add("is-active");
+    burgerButton.setAttribute("aria-label", "메인메뉴 닫기");
+    menu.classList.add("is-active"); // '.menu'에 'is-active' 클래스를 추가합니다.
   }
-});
+};
+
+// 이벤트 바인딩
+burgerButton.addEventListener("click", handleClick);
