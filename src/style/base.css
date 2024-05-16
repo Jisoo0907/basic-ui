@@ -2,8 +2,6 @@
   --base-font-family: "SUIT Variable", sans-serif;
 }
 
-/* body *, body *::before, body *::after로 하면 body 안으로 범위 더 줄어듦 
-레진 코믹스 - [class] 줬을 때만 border-box로 설정. */
 body *,
 body *::before,
 body *::after {
@@ -13,4 +11,16 @@ body *::after {
 body {
   font-family: var(--base-font-family);
   line-height: 1.15;
+  margin: 0;
 }
+
+*:focus {
+  outline: 0;
+}
+
+*:focus-visible {
+  outline: 2px solid #24388d;
+}
+
+/* body *, body *::before, body *::after로 하면 body 안으로 범위 더 줄어듦 
+레진 코믹스 - [class] 줬을 때만 border-box로 설정. */
