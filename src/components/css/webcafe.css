@@ -19,5 +19,6 @@
     max-width: 90%;
     width: 100%; /* center 했을 때 item들도 축소된 걸 방지 */
     flex: 1 0 auto;
+    gap: 24px;
   }
 }
