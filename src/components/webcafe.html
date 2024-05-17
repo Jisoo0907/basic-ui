@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/theory/css/grid-guide.css" />
     <link rel="stylesheet" href="/theory/css/default.css" />
     <link rel="stylesheet" href="/theory/css/webcafe.css" />
+    <link rel="stylesheet" href="/components/css/sprite.css" />
     <script type="module" src="/theory/js/grid-guide.js"></script>
     <script type="module" src="/js/navigation.js"></script>
   </head>
@@ -50,10 +51,14 @@
       </div>
       <div class="main grid-container">
         <div class="book cols-12 lg-cols-4">
-          <div class="sprite">추천서적</div>
+          <div class="headline flex-items-center sprite sprite-book">
+            추천서적
+          </div>
         </div>
         <div class="news cols-12 lg-cols-8">
-          <div class="sprite">새소식</div>
+          <div class="headline flex-items-center sprite sprite-news">
+            새소식
+          </div>
           <figure class="iframe-container">
             <iframe
               width="560"
@@ -78,9 +83,21 @@
             ><span class="fas fa-calendar-days"></span>2024.05.16</time
           >
         </div>
-        <div class="board cols-12 lg-cols-4">게시판</div>
-        <div class="favorite cols-12 lg-cols-3">인기 사이트</div>
-        <div class="twitter cols-12 lg-cols-5">트위터</div>
+        <div class="board cols-12 lg-cols-4">
+          <div class="headline flex-items-center sprite sprite-board">
+            게시판
+          </div>
+        </div>
+        <div class="favorite cols-12 lg-cols-3">
+          <div class="headline flex-items-center sprite sprite-favorite">
+            인기사이트
+          </div>
+        </div>
+        <div class="twitter cols-12 lg-cols-5">
+          <div class="headline flex-items-center sprite sprite-twitter">
+            트위터
+          </div>
+        </div>
       </div>
       <div class="footer">푸터</div>
     </div>
